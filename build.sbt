@@ -5,7 +5,7 @@ lazy val root = project
   .in(file("."))
   .enablePlugins(ScriptedPlugin)
   .settings(
-    name := "akka-http-java-seed.g8",
+    name := "incubator-pekko-http-java-seed.g8",
     Test / test := {
       val _ = (Test / g8Test).toTask("").value
     },
@@ -18,7 +18,8 @@ lazy val root = project
 //    open docs/target/paradox/site/main/index.html
 lazy val docs = project
   .in(file("docs"))
-  .enablePlugins(ParadoxPlugin)
+  .enablePlugins(ParadoxPlugin, PekkoParadoxPlugin)
   .settings(
-    resolvers += Resolver.typesafeIvyRepo("releases")
+    resolvers += Resolver.typesafeIvyRepo("releases"),
+    pekkoParadoxGithub := Some("https://github.com/apache/incubator-pekko-http-quickstart-java.g8")
   )

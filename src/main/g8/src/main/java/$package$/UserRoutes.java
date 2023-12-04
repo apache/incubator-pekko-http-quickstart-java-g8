@@ -5,17 +5,17 @@ import java.util.Optional;
 import java.util.concurrent.CompletionStage;
 
 import $package$.UserRegistry.User;
-import akka.actor.typed.ActorRef;
-import akka.actor.typed.ActorSystem;
-import akka.actor.typed.Scheduler;
-import akka.actor.typed.javadsl.AskPattern;
-import akka.http.javadsl.marshallers.jackson.Jackson;
+import org.apache.pekko.actor.typed.ActorRef;
+import org.apache.pekko.actor.typed.ActorSystem;
+import org.apache.pekko.actor.typed.Scheduler;
+import org.apache.pekko.actor.typed.javadsl.AskPattern;
+import org.apache.pekko.http.javadsl.marshallers.jackson.Jackson;
 
-import static akka.http.javadsl.server.Directives.*;
+import static org.apache.pekko.http.javadsl.server.Directives.*;
 
-import akka.http.javadsl.model.StatusCodes;
-import akka.http.javadsl.server.PathMatchers;
-import akka.http.javadsl.server.Route;
+import org.apache.pekko.http.javadsl.model.StatusCodes;
+import org.apache.pekko.http.javadsl.server.PathMatchers;
+import org.apache.pekko.http.javadsl.server.Route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

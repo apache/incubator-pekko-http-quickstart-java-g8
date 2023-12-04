@@ -5,27 +5,24 @@ apply plugin: 'application'
 repositories {
     mavenCentral()
     mavenLocal()
-    maven {
-        url "https://repo.akka.io/maven"
-    }
 }
 
 def versions = [
-    AkkaVersion: "$akka_version$",
-    AkkaHttpVersion: "$akka_http_version$",
+    PekkoVersion: "$pekko_version$",
+    PekkoHttpVersion: "$pekko_http_version$",
     ScalaBinary: "2.13"
 ]
 dependencies {
-    implementation platform("com.typesafe.akka:akka-http-bom_\${versions.ScalaBinary}:\${versions.AkkaHttpVersion}")
+    implementation platform("org.apache.pekko:pekko-http-bom_\${versions.ScalaBinary}:\${versions.PekkoHttpVersion}")
 
-    implementation "com.typesafe.akka:akka-http_\${versions.ScalaBinary}"
-    implementation "com.typesafe.akka:akka-http-jackson_\${versions.ScalaBinary}"
-    implementation "com.typesafe.akka:akka-actor-typed_\${versions.ScalaBinary}:\${versions.AkkaVersion}"
-    implementation "com.typesafe.akka:akka-stream_\${versions.ScalaBinary}:\${versions.AkkaVersion}"
-    implementation 'ch.qos.logback:logback-classic:1.2.3'
-    testImplementation "com.typesafe.akka:akka-http-testkit_\${versions.ScalaBinary}"
-    testImplementation "com.typesafe.akka:akka-actor-testkit-typed_\${versions.ScalaBinary}:\${versions.AkkaVersion}"
-    testImplementation 'junit:junit:4.12'
+    implementation "org.apache.pekko:pekko-http_\${versions.ScalaBinary}"
+    implementation "org.apache.pekko:pekko-http-jackson_\${versions.ScalaBinary}"
+    implementation "org.apache.pekko:pekko-actor-typed_\${versions.ScalaBinary}:\${versions.PekkoVersion}"
+    implementation "org.apache.pekko:pekko-stream_\${versions.ScalaBinary}:\${versions.PekkoVersion}"
+    implementation 'ch.qos.logback:logback-classic:1.2.13'
+    testImplementation "org.apache.pekko:pekko-http-testkit_\${versions.ScalaBinary}"
+    testImplementation "org.apache.pekko:pekko-actor-testkit-typed_\${versions.ScalaBinary}:\${versions.PekkoVersion}"
+    testImplementation 'junit:junit:4.13.2'
 }
 
 mainClassName = "$package$.QuickstartApp"

@@ -2,12 +2,12 @@ IntelliJ IDEA
 -------------
 
 [IntelliJ IDEA](https://www.jetbrains.com/idea/) from JetBrains is one of the leading IDEs in the Java/Scala community,
-and it has excellent support for Akka HTTP. This section of the tutorial describes how to set up, test and run the
+and it has excellent support for Pekko HTTP. This section of the tutorial describes how to set up, test and run the
 sample project in IntelliJ.
 
 ## Setting up the project
 
-To add the Akka HTTP example project to IntelliJ, follow these steps:
+To add the Pekko HTTP example project to IntelliJ, follow these steps:
 
 1. Open IntelliJ.
 1. Select **Open** from the Welcome dialog or **File &gt; Open** from the Editor.
@@ -37,6 +37,6 @@ output should look like the output in the shell:
 
 ## Tutorial done!
 
-Congratulations! You can start building real-world applications that use Akka HTTP. Of course, we didn't have time
-to cover all Akka HTTP features in this short guide. See the
-[documentation](http://doc.akka.io/docs/akka-http/current/java/http/index.html) to learn more.
+Congratulations! You can start building real-world applications that use Pekko HTTP. Of course, we didn't have time
+to cover all Pekko HTTP features in this short guide. See the
+[documentation](http://pekko.apache.org/docs/pekko-http/current/java/http/index.html) to learn more.

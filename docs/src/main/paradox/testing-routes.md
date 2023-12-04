@@ -7,15 +7,15 @@ This separation, other than being a good idea on its own, was all for this momen
 
 ## Unit testing routes
 
-There are multiple ways one can test an HTTP application of course, but lets start at the simplest and also quickest way: unit testing. In this style of testing, we won't even need to spin up an actual server - all the tests will be executed on the routes directly - without the need of hitting actual network. This is due to Akka HTTP's pure design and separation between the network layer (represented as a bi-directional `Flow` of byte strings to Http domain objects).
+There are multiple ways one can test an HTTP application of course, but lets start at the simplest and also quickest way: unit testing. In this style of testing, we won't even need to spin up an actual server - all the tests will be executed on the routes directly - without the need of hitting actual network. This is due to Pekko HTTP's pure design and separation between the network layer (represented as a bi-directional `Flow` of byte strings to Http domain objects).
 
-In other words, unit testing in Akka HTTP is simply "executing" the routes by passing in an `HttpResponse` to the route, and later inspecting what `HttpResponse` (or `rejection` if the request could not be handled) it resulted in. All this in-memory, without having to start a real HTTP server - which gives us supreme speed and turn-over time when developing an application using Akka.
+In other words, unit testing in Pekko HTTP is simply "executing" the routes by passing in an `HttpResponse` to the route, and later inspecting what `HttpResponse` (or `rejection` if the request could not be handled) it resulted in. All this in-memory, without having to start a real HTTP server - which gives us supreme speed and turn-over time when developing an application using Pekko.
 
 First we'll need to extend a number of base traits:
 
 @@snip [QuickstartServer.java]($g8srctest$/java/$package$/UserRoutesTest.java) { #test-top }
 
-Here we're using `JUnitRouteTest` which provides ability to test akka-http routes. 
+Here we're using `JUnitRouteTest` which provides ability to test pekko-http routes. 
 
 Next, we'll need to bring into the test class our routes that we want to test. We're doing this by wrapping put rout 
 into `TestRoute` by using `testRoute(server.createRoute())` to be able to provide request parameters to emulate HTTP call 
@@ -63,7 +63,7 @@ Sometimes, however, one wants to test the complete "full application", including
   
   If you want to test specific timing and entity draining behaviors of your apps you may want to add full integration
   tests for them. For most routes this should not be needed, however, we'd recommend doing so when using more of
-  the streaming features of Akka HTTP.
+  the streaming features of Pekko HTTP.
   
 @@@
 

@@ -1,26 +1,24 @@
-val akkaHttpVersion = "$akka_http_version$"
-val akkaVersion    = "$akka_version$"
-
-resolvers += "Akka library repository".at("https://repo.akka.io/maven")
+val pekkoHttpVersion = "$pekko_http_version$"
+val pekkoVersion    = "$pekko_version$"
 
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "$organization$",
-      scalaVersion := "2.13.1",
+      scalaVersion := "2.13.12",
       name := "$name$"
     )),
     name := "TestProject",
     libraryDependencies ++= Seq(
-      "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
-      "com.typesafe.akka" %% "akka-actor-typed"     % akkaVersion,
-      "com.typesafe.akka" %% "akka-stream"          % akkaVersion,
-      "com.typesafe.akka" %% "akka-http-jackson"    % akkaHttpVersion,
-      "ch.qos.logback"    % "logback-classic"       % "1.2.3",
+      "org.apache.pekko" %% "pekko-http"            % pekkoHttpVersion,
+      "org.apache.pekko" %% "pekko-actor-typed"     % pekkoVersion,
+      "org.apache.pekko" %% "pekko-stream"          % pekkoVersion,
+      "org.apache.pekko" %% "pekko-http-jackson"    % pekkoHttpVersion,
+      "ch.qos.logback"    % "logback-classic"        % "1.2.13",
 
-      "com.typesafe.akka" %% "akka-testkit"                 % akkaVersion     % Test,
-      "com.typesafe.akka" %% "akka-http-testkit"            % akkaHttpVersion % Test,
-      "com.typesafe.akka" %% "akka-actor-testkit-typed"     % akkaVersion     % Test,
+      "org.apache.pekko" %% "pekko-testkit"                 % pekkoVersion     % Test,
+      "org.apache.pekko" %% "pekko-http-testkit"            % pekkoHttpVersion % Test,
+      "org.apache.pekko" %% "pekko-actor-testkit-typed"     % pekkoVersion     % Test,
       "junit"              % "junit"                        % "4.12"          % Test,
       "com.novocode"       % "junit-interface"              % "0.10"          % Test
     ),

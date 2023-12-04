@@ -1,19 +1,19 @@
 package $package$;
 
-import akka.NotUsed;
-import akka.actor.typed.ActorRef;
-import akka.actor.typed.Behavior;
-import akka.http.javadsl.ConnectHttp;
-import akka.http.javadsl.Http;
-import akka.http.javadsl.ServerBinding;
-import akka.http.javadsl.model.HttpRequest;
-import akka.http.javadsl.model.HttpResponse;
-import akka.http.javadsl.server.Route;
-import akka.stream.Materializer;
-import akka.stream.javadsl.Flow;
-import akka.actor.typed.javadsl.Adapter;
-import akka.actor.typed.javadsl.Behaviors;
-import akka.actor.typed.ActorSystem;
+import org.apache.pekko.NotUsed;
+import org.apache.pekko.actor.typed.ActorRef;
+import org.apache.pekko.actor.typed.Behavior;
+import org.apache.pekko.http.javadsl.ConnectHttp;
+import org.apache.pekko.http.javadsl.Http;
+import org.apache.pekko.http.javadsl.ServerBinding;
+import org.apache.pekko.http.javadsl.model.HttpRequest;
+import org.apache.pekko.http.javadsl.model.HttpResponse;
+import org.apache.pekko.http.javadsl.server.Route;
+import org.apache.pekko.stream.Materializer;
+import org.apache.pekko.stream.javadsl.Flow;
+import org.apache.pekko.actor.typed.javadsl.Adapter;
+import org.apache.pekko.actor.typed.javadsl.Behaviors;
+import org.apache.pekko.actor.typed.ActorSystem;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.CompletionStage;
@@ -52,7 +52,7 @@ public class QuickstartApp {
         });
 
         // boot up server using the route as defined below
-        ActorSystem.create(rootBehavior, "HelloAkkaHttpServer");
+        ActorSystem.create(rootBehavior, "HelloPekkoHttpServer");
         //#server-bootstrapping
     }
 

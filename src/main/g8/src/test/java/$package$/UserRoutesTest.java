@@ -2,15 +2,15 @@ package $package$;
 
 
 //#test-top
-import akka.actor.typed.ActorRef;
-import akka.http.javadsl.model.*;
-import akka.http.javadsl.testkit.JUnitRouteTest;
-import akka.http.javadsl.testkit.TestRoute;
+import org.apache.pekko.actor.typed.ActorRef;
+import org.apache.pekko.http.javadsl.model.*;
+import org.apache.pekko.http.javadsl.testkit.JUnitRouteTest;
+import org.apache.pekko.http.javadsl.testkit.TestRoute;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
-import akka.http.javadsl.model.HttpRequest;
-import akka.http.javadsl.model.StatusCodes;
-import akka.actor.testkit.typed.javadsl.TestKitJunitResource;
+import org.apache.pekko.http.javadsl.model.HttpRequest;
+import org.apache.pekko.http.javadsl.model.StatusCodes;
+import org.apache.pekko.actor.testkit.typed.javadsl.TestKitJunitResource;
 
 
 //#set-up
