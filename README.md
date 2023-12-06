@@ -3,7 +3,7 @@
 You can use [Giter8][g8] to create your own project from the quickstart.
 
 Prerequisites:
-- JDK 8
+- JDK 17 (Java Records used in the sample code)
 - sbt 1.9.x or higher
 
 Open a console and run the following command to apply this template:
