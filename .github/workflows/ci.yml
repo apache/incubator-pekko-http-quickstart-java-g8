@@ -35,23 +35,22 @@ jobs:
         run: |-
           sbt new file://$PWD --name=hello-world --force && pushd hello-world &&  ./gradlew --console=plain build
 
-    build-docs:
-      if: github.repository == 'apache/incubator-pekko-http-quickstart-java.g8'
-      runs-on: ubuntu-20.04
-  
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Setup Java 11
-          uses: actions/setup-java@v4
-          with:
-            distribution: temurin
-            java-version: 11
-  
-        - name: Cache Coursier cache
-          uses: coursier/cache-action@v6.4.0
-  
-        - name: sbt & Paradox
-          run: sbt test docs/paradox
-  
+  build-docs:
+    if: github.repository == 'apache/incubator-pekko-http-quickstart-java.g8'
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 11
+
+      - name: Cache Coursier cache
+        uses: coursier/cache-action@v6.4.0
+
+      - name: sbt & Paradox
+        run: sbt test docs/paradox
