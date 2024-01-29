@@ -3,7 +3,7 @@
 You can use [Giter8][g8] to create your own project from the quickstart.
 
 Prerequisites:
-- JDK 17 (Java Records used in the sample code)
+- JDK 17 (Java Records are used in the sample code)
 - sbt 1.9.x or higher
 
 Open a console and run the following command to apply this template:
@@ -22,7 +22,7 @@ This template will prompt for the following parameters. Press `Enter` if the def
 - `pekko-http-version`: Specifies which version of Pekko HTTP should be used for this project.
 - `pekko-version`: Specifies which version of Pekko should be used for this project.
 
-This template comes with example for an Pekko HTTP server on Java `QuickstartServer`, along with their respective tests.
+This template comes with example for a Pekko HTTP server on Java `QuickstartServer`, along with their respective tests.
 
 Once inside the project folder, to run this code, you can issue the following command to run the server:
 ```

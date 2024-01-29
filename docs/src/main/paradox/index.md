@@ -1,6 +1,6 @@
 # Apache Pekko HTTP Quickstart for Java
 
-Pekko HTTP offers a general toolkit for providing and consuming HTTP-based services. The Pekko HTTP modules implement a full server- and client-side HTTP stack on top of `pekko-actor` and `pekko-stream`. A typical application does not sit on top of Pekko HTTP. Instead, Pekko HTTP makes it easier to build integration layers based on HTTP, and therefore stays on the sidelines. This allows you to base your app on what makes sense and use Pekko HTTP for HTTP integration.
+Apache Pekko HTTP offers a general toolkit for providing and consuming HTTP-based services. The Pekko HTTP modules implement a full server- and client-side HTTP stack on top of `pekko-actor` and `pekko-stream`. A typical application does not sit on top of Pekko HTTP. Instead, Pekko HTTP makes it easier to build integration layers based on HTTP, and therefore stays on the sidelines. This allows you to base your app on what makes sense and use Pekko HTTP for HTTP integration.
 
 Pekko HTTP is not a framework--not because we don't like frameworks--but to provide maximum flexibility. For example, you might use the Play framework to implement browser-based interactions.
 
@@ -39,7 +39,7 @@ When you run sbt, it downloads project dependencies. The `>` prompt indicates th
 
 At the sbt prompt, enter `reStart`.
 
-sbt builds the project, starts an Pekko HTTP server, and runs the example application.
+sbt builds the project, starts a Pekko HTTP server, and runs the example application.
 
 The output should look something like this:
 
