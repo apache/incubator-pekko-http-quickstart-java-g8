@@ -20,7 +20,7 @@ You can run the Pekko HTTP example project on Linux, MacOS, or Windows. The only
 
 ## Downloading the example
 
-Follow the instructions in https://github.com/apache/incubator-pekko-http-quickstart-java.g8
+Follow the instructions in https://github.com/apache/pekko-http-quickstart-java.g8
 
 ## Running the example
 
