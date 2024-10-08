@@ -19,7 +19,7 @@ dependencies {
     implementation "org.apache.pekko:pekko-http-jackson_\${versions.ScalaBinary}"
     implementation "org.apache.pekko:pekko-actor-typed_\${versions.ScalaBinary}:\${versions.PekkoVersion}"
     implementation "org.apache.pekko:pekko-stream_\${versions.ScalaBinary}:\${versions.PekkoVersion}"
-    implementation 'ch.qos.logback:logback-classic:1.2.13'
+    implementation 'ch.qos.logback:logback-classic:1.3.14'
     testImplementation "org.apache.pekko:pekko-http-testkit_\${versions.ScalaBinary}"
     testImplementation "org.apache.pekko:pekko-actor-testkit-typed_\${versions.ScalaBinary}:\${versions.PekkoVersion}"
     testImplementation 'junit:junit:4.13.2'
